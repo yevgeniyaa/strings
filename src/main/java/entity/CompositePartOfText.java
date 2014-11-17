@@ -59,4 +59,17 @@ public class CompositePartOfText implements TextComponent {
     public TextComponent parse() {
         return Parser.parse(this);
     }
+
+    public CompositeType getChildType() {
+        switch (getCompositeType()) {
+            case TEXT:
+                return CompositeType.PARAGRAPH;
+            case PARAGRAPH:
+                return CompositeType.SENTENCE;
+            case SENTENCE:
+                return CompositeType.WORD;
+            default:
+                return CompositeType.TEXT;
+        }
+    }
 }

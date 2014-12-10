@@ -11,6 +11,7 @@ public class Runner {
                 "\tВ которой космический аппарат может достичь сверхсветовой скорости." +
                 "\t\nДвижение выше скорости света невозможно для объектов в нормальном пространстве-времени.";
 
+        //todo add 9-th task
         CompositePartOfText text = new CompositePartOfText(CompositeType.TEXT, stringToParse);
         text.parse();
 
